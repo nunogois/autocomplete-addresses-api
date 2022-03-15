@@ -14,7 +14,7 @@ describe('autocomplete-addresses-api routes', () => {
     )
   })
 
-  test('GET /search/ab > returns a 400 with an error message, since the query param is required', async () => {
+  test('GET /search/ab > returns a 400 with an error message, since the query param is required and should be at least 3 characters long', async () => {
     const res = await request(app).get('/search/ab')
     expect(res.statusCode).toBe(400)
     expect(res.text).toBe(
