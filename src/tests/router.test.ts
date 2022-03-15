@@ -18,7 +18,7 @@ describe('autocomplete-addresses-api routes', () => {
     const res = await request(app).get('/search/ab')
     expect(res.statusCode).toBe(400)
     expect(res.text).toBe(
-      'Query parameter is required and should have be at least 3 characters long.'
+      'Query parameter is required and should be at least 3 characters long.'
     )
   })
 

@@ -23,7 +23,7 @@ router.get('/search/:query', async (req, res) => {
     return res
       .status(400)
       .send(
-        'Query parameter is required and should have be at least 3 characters long.'
+        'Query parameter is required and should be at least 3 characters long.'
       )
 
   res.json(searchable.search(query).slice(0, 20)) // Return the first 20 results
